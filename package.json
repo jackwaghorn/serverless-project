@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jackwaghorn/serverless-project#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "@prismicio/client": "^5.1.0",
+    "node-fetch": "^2.6.1",
+    "prismic-dom": "^2.2.6"
   }
 }

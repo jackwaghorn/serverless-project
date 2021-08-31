@@ -19,7 +19,7 @@
         const responseText = document.getElementById('response-output')
 
         fetchPokedexBtn.addEventListener('click', async () => {
-          const response = await fetch('/.netlify/functions/pokedex').then(response => response.json())
+          const response = await fetch('/.netlify/functions/prismic').then(response => response.json())
 
           responseText.innerText = JSON.stringify(response)
         })
