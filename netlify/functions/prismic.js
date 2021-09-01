@@ -12,7 +12,7 @@ exports.handler = async function () {
       let newItems = Object.values(data).map((item) => {
         return {
             name: item.data.product.name.value[0].text,
-            id: item.uid,
+            id: item.id,
             price: item.data.product.price.value,
             url: 'https://serverless-rox.netlify.app/.netlify/functions/prismic',
             stock: item.data.product.stock.value
