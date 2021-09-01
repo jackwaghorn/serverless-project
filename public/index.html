@@ -10,16 +10,24 @@
     <h1>Up and Running with Serverless Functions</h1>
     <button id="fetch-btn">Fetch</button>
     <button id="fetch-pokedex-btn">Fetch Pokedex</button>
+    <button id="fetch-inventory-btn">Fetch Inventory</button>
     <p id="response-output">Response Placeholder</p>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const fetchBtn = document.getElementById('fetch-btn')
         const fetchPokedexBtn = document.getElementById('fetch-pokedex-btn')
+        const fetchInventoryBtn = document.getElementById('fetch-inventory-btn')
         const responseText = document.getElementById('response-output')
 
-        fetchPokedexBtn.addEventListener('click', async () => {
+        fetchInventoryBtn.addEventListener('click', async () => {
           const response = await fetch('/.netlify/functions/prismic').then(response => response.json())
+
+          responseText.innerText = JSON.stringify(response)
+        })
+
+        fetchPokedexBtn.addEventListener('click', async () => {
+          const response = await fetch('/.netlify/functions/snipcart-inventory').then(response => response.json())
 
           responseText.innerText = JSON.stringify(response)
         })
