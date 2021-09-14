@@ -19,7 +19,7 @@ exports.handler = async function () {
     return {
         name: item.name,
         id: item.userDefinedId,
-        stock: item.stock
+        inventory: item.stock
     };
   });
 
