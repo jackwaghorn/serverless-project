@@ -16,7 +16,9 @@ exports.handler = async function () {
             price: item.data.product.price.value,
             url: 'https://serverless-rox.netlify.app/.netlify/functions/prismic',
             stock: item.data.product.stock.value,
-            weight: item.data.product.weight.value 
+        dimensions: {
+          weight: item.data.product.weight.value 
+        }
         };
       });
 
