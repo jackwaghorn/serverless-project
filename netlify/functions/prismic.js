@@ -13,8 +13,10 @@ exports.handler = async function () {
         return {
             name: item.data.product.name.value[0].text,
             id: item.id,
-            eur: item.data.product.euro.value,
+            price: {
+              eur: item.data.product.euro.value,
             gbp: item.data.product.pound.value,
+            },
             url: 'https://serverless-rox.netlify.app/.netlify/functions/prismic',
             stock: item.data.product.stock.value,
         dimensions: {
