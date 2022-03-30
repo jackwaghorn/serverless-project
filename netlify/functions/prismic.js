@@ -17,7 +17,7 @@ exports.handler = async function () {
               eur: item.data.product.euro.value,
             gbp: item.data.product.pound.value,
             },
-            url: 'https://serverless-rox.netlify.app/.netlify/functions/prismic',
+            url: 'https://roxanakenjeeva.com/.netlify/functions/prismic',
             stock: item.data.product.stock.value,
         dimensions: {
           weight: item.data.product.weight.value 
